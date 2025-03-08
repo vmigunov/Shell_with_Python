@@ -6,7 +6,7 @@ The project is designed to teach system programming and working with the CLI.
 
 ## DEV logs:
 08.03.2025 18:05 **Created project, added main.py. Just waiting to user input**  
-08.03.2025 18:10 **Added command "help"**  
+08.03.2025 18:10 **Added command "exit"**  
 08.03.2025 18:20 **Added command "echo"**  
 08.03.2025 18:35 **Refactoring.** 
 **Key changes:**  
@@ -30,7 +30,7 @@ The project is designed to teach system programming and working with the CLI.
 - **Output for Executable Files:** 
         If an executable file is found, the program prints the full path to it in the format <command> is <path>.  
         If the command is not found in either the builtin commands or in PATH, the message <command>: not found is printed.  
-- Handling Missing Argument for type:
+- **Handling Missing Argument for type:**
     If the type command is called without arguments, the message type: missing argument is printed.   
 
 08.03.2025 19:45 **added support for running external programs with arguments:**  
