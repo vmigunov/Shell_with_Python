@@ -24,14 +24,18 @@ The project is designed to teach system programming and working with the CLI.
 - If the command is not recognized, a message like invalid_command: not found is printed.  
 
 08.03.2025 19:30 **Extended command "type":**  
-
 - Search for Executable Files in PATH:
-    We use the PATH environment variable to get a list of directories to search for executable files.
+    We use the PATH environment variable to get a list of directories to search for executable files.  
     For each directory in PATH, we check if a file with the command name exists and is executable (using os.access(executable_path, os.X_OK)).  
-
 - Output for Executable Files:  
-    If an executable file is found, the program prints the full path to it in the format <command> is <path>.
-    If the command is not found in either the builtin commands or in PATH, the message <command>: not found is printed.
-
+    If an executable file is found, the program prints the full path to it in the format <command> is <path>.  
+    If the command is not found in either the builtin commands or in PATH, the message <command>: not found is printed.  
 - Handling Missing Argument for type:
-    If the type command is called without arguments, the message type: missing argument is printed.
+    If the type command is called without arguments, the message type: missing argument is printed.   
+
+08.03.2025 19:45 **added support for running external programs with arguments:**  
+- If the command is not a built-in, the program searches for an executable file in the directories specified in PATH.  
+- If the file is found, it is launched using subprocess.run, and arguments are passed to it.  
+
+**The find_executable function:** This function searches for an executable file in the directories in PATH and returns the full path to it if it is found.  
+**Error handling:** If an error occurs when launching an external program, the program displays an error message.
