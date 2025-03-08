@@ -22,3 +22,16 @@ The project is designed to teach system programming and working with the CLI.
 - The type command checks whether the command is a builtin or not recognized.  
 - If the command is a builtin (such as echo or exit), a message like echo is a shell builtin is printed.  
 - If the command is not recognized, a message like invalid_command: not found is printed.  
+
+08.03.2025 19:30 **Extended command "type":**  
+
+- Search for Executable Files in PATH:
+    We use the PATH environment variable to get a list of directories to search for executable files.
+    For each directory in PATH, we check if a file with the command name exists and is executable (using os.access(executable_path, os.X_OK)).  
+
+- Output for Executable Files:  
+    If an executable file is found, the program prints the full path to it in the format <command> is <path>.
+    If the command is not found in either the builtin commands or in PATH, the message <command>: not found is printed.
+
+- Handling Missing Argument for type:
+    If the type command is called without arguments, the message type: missing argument is printed.
