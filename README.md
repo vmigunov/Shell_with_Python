@@ -8,4 +8,6 @@ The project is designed to teach system programming and working with the CLI.
 08.03.2025 18:05 Created project, added main.py. Just waiting to user input  
 08.03.2025 18:10 Added command "help" handler  
 08.03.2025 18:20 Added command "echo" handler  
-
+08.03.2025 18:35 Refactoring. Key changes:  
+Command Dictionary: Added a dictionary (commands) to map command names to their corresponding functions (lambdas). This makes it easy to add new commands without modifying the main logic.
+Simplified Command Handling: Each command is associated with a lambda function that executes the desired behavior.
