@@ -45,6 +45,6 @@ The project is designed to teach system programming and working with the CLI.
 **The find_executable function:** This function searches for an executable file in the directories in PATH and returns the full path to it if it is found.  
 **Error handling:** If an error occurs when launching an external program, the program displays an error message.
 
-### 08.03.2025 20:00 Added `type` command: to print current directory.  
+### 08.03.2025 20:00 Added `pwd` command: to print current directory.  
 Functions **type_command**, **find_executable** and **run_external_command** are moved to the module **shell_utils.py**  
 These functions are responsible for processing the type command, searching for executable files and running external commands.  
