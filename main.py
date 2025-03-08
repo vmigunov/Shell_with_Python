@@ -7,11 +7,12 @@ def main():
 
     # List of supported commands
     commands = {
-        "exit": lambda: sys.exit(0),  # Exit the program with code 0
+        "exit": lambda args: sys.exit(
+            int(args[0]) if args else 0
+        ),  # Exit with optional code
         "echo": lambda args: print(" ".join(args)),  # Echo command with arguments
     }
 
-    # Wait for user input
     user_input = input().strip()
 
     # Split the input into command and arguments
@@ -20,7 +21,10 @@ def main():
     args = parts[1:] if len(parts) > 1 else []  # Arguments are the rest
 
     if command in commands:
-        commands[command](args)
+        try:
+            commands[command](args)
+        except (ValueError, IndexError) as e:
+            print(f"Error: {e}")
     else:
         print(f"{command}: command not found")
 
