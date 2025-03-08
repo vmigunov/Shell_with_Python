@@ -4,17 +4,14 @@
 This repository contains a simple shell implementation in Python.  
 The project is designed to teach system programming and working with the CLI.
 
+---
+
 ## DEV logs:
 
 ### 08.03.2025 18:05 - Created project, added `main.py`
 - Waiting for user input.
 
----
-
 ### 08.03.2025 18:10 - Added the `exit` command
-
----
-
 ### 08.03.2025 18:20 - Added the `echo` command
 
 ---
