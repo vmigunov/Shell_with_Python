@@ -77,4 +77,10 @@ These functions are responsible for:
 ### 08.03.2025 21:00 - Added `cd` command
 
 - The `cd` command changes the current working directory.
-- The handler for the `cd` command is defined in the `change_directory` function in the `shell_utils.py` module.
+- Support for `~` in the `cd` command (Replacing `~` with the full path to the home directory)  
+- If the argument for the `cd` command is `~`, it is replaced with the full path to the home directory using `os.path.expanduser("~")`.
+- If the argument starts with `~/`, it is also replaced with the full path to the home directory.
+- If the `cd` command is called without arguments, the program changes the current directory to the user's home directory.
+- The handler for the `cd` command is defined in the `change_directory` function in the `shell_utils.py` module.  
+
+---
