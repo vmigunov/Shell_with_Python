@@ -6,3 +6,4 @@ The project is designed to teach system programming and working with the CLI.
 
 # DEV logs:
 08.03.2025 18:05 Created project, added main.py. Just waiting to user input
+08.03.2025 18:10 Added command help handler
