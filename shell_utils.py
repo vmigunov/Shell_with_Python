@@ -43,3 +43,28 @@ def run_external_command(command, args):
             print(f"Error: {e}")
     else:
         print(f"{command}: command not found")
+
+
+def change_directory(args):
+    """Handle the 'cd' command."""
+    if not args:
+        # If no arguments, change to the home directory
+        home_dir = os.path.expanduser("~")
+        try:
+            os.chdir(home_dir)
+        except Exception as e:
+            print(f"cd: {e}")
+        return
+
+    target_dir = args[0]
+    if target_dir == "~":
+        target_dir = os.path.expanduser("~")
+    elif target_dir.startswith("~/"):
+        target_dir = os.path.expanduser(target_dir)
+
+    try:
+        os.chdir(target_dir)  # Change the current working directory
+    except FileNotFoundError:
+        print(f"cd: {target_dir}: No such file or directory")
+    except Exception as e:
+        print(f"cd: {e}")

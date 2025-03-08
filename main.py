@@ -1,6 +1,6 @@
 import sys
 import os
-from shell_utils import type_command, run_external_command
+from shell_utils import type_command, run_external_command, change_directory
 
 
 def main():
@@ -19,6 +19,7 @@ def main():
         "pwd": lambda args: print(
             os.getcwd()
         ),  # Pwd command to print current directory
+        "cd": lambda args: change_directory(args),  # cd command to change directory
     }
 
     # Wait for user input
