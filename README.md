@@ -6,8 +6,8 @@ The project is designed to teach system programming and working with the CLI.
 
 ## DEV logs:
 08.03.2025 18:05 **Created project, added main.py. Just waiting to user input**  
-08.03.2025 18:10 **Added command "help" handler**  
-08.03.2025 18:20 **Added command "echo" handler**  
+08.03.2025 18:10 **Added command "help"**  
+08.03.2025 18:20 **Added command "echo"**  
 08.03.2025 18:35 **Refactoring.** 
 **Key changes:**  
 **Command Dictionary:** Added a dictionary (commands) to map command names to their corresponding functions (lambdas). This makes it easy to add new commands without modifying the main logic.  
@@ -18,3 +18,7 @@ The project is designed to teach system programming and working with the CLI.
 - If an argument is passed (e.g. exit 0), the program will exit with that code.  
 - If no argument is passed (e.g. just exit), the program will exit with the default code 0.  
 
+08.03.2025 19:15 **Added command "type":**
+- The type command checks whether the command is a builtin or not recognized.  
+- If the command is a builtin (such as echo or exit), a message like echo is a shell builtin is printed.  
+- If the command is not recognized, a message like invalid_command: not found is printed.  
