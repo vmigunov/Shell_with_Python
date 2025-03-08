@@ -1,4 +1,4 @@
-# Shell_with_Python
+# Shell_by_Python
 
 ## Tutorial Project: Custom Shell powered by Python
 This repository contains a simple shell implementation in Python.  
